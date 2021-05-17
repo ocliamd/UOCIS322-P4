@@ -1,6 +1,7 @@
 import nose
 import arrow
 import acp_times
+#failing this test exclusively
 
 def test_open_600():
     assert str(acp_times.open_time(399, 600, arrow.get('2020-01-01T00:00:00'))) == "2020-01-01T12:06:00+00:00"
