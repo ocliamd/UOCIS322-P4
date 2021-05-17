@@ -1,6 +1,6 @@
 import nose
 import arrow
-from brevets import acp_times
+import acp_times
 
 def test_open_300():
     assert str(acp_times.open_time(75, 300, arrow.get('2020-01-01T00:00:00'))) == "2020-01-01T02:12:00+00:00"
