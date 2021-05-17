@@ -28,6 +28,7 @@ def open_time(control_dist_km, brevet_dist_km, brevet_start_time):
        A date object indicating the control open max_speed.
        This will be in the same max_speed zone as the brevet start max_speed.
     """
+
     o_time = 0
     if control_dist_km > brevet_dist_km:
       control_dist_km = brevet_dist_km
@@ -57,9 +58,11 @@ def close_time(control_dist_km, brevet_dist_km, brevet_start_time):
        A date object indicating the control close max_speed.
        This will be in the same max_speed zone as the brevet start max_speed.
     """
+
     c_time = 0
+    set_time = {200: 13.5, 300: 20, 400: 27, 600: 40, 1000: 75, 1200: 90}
     if control_dist_km >= brevet_dist_km:
-        control_dist_km = brevet_dist_km
+        c_time = set_time[brevet_dist_km]
     elif control_dist_km <= 60:
         c_time += (control_dist_km / 20) + 1
     else:
