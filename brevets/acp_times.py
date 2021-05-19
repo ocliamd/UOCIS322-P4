@@ -59,7 +59,7 @@ def close_time(control_dist_km, brevet_dist_km, brevet_start_time):
     #creating a dictionary of minimum speeds, skipped 200-400 and 400-600 cause theyre all the same speed
     min_speed = {"0-600": 15, "600-1000": 11.428, "1000-1300": 13.333} 
     c_time = 0      # initialize close time
-    set_time = {200: 13.30, 300: 20, 400: 27, 600: 40, 1000: 75} # initializing default times
+    set_time = {200: 13.50, 300: 20, 400: 27, 600: 40, 1000: 75} # initializing default times
     if control_dist_km >= brevet_dist_km:    # if control distance is greater than equal to the brevet distance
         c_time = set_time[brevet_dist_km]    # sets close time to the correct set time
     elif control_dist_km <= 60:              # case where control distance is <= to 60
